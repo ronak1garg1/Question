@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		857BA1FB554134192D2A7180 /* Pods_Questions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5817201FABEEED25246EF36A /* Pods_Questions.framework */; };
 		C6BF0E4120FCBC8B003D7204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF0E4020FCBC8B003D7204 /* AppDelegate.swift */; };
-		C6BF0E4320FCBC8B003D7204 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF0E4220FCBC8B003D7204 /* ViewController.swift */; };
+		C6BF0E4320FCBC8B003D7204 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF0E4220FCBC8B003D7204 /* QuestionTableViewController.swift */; };
 		C6BF0E4620FCBC8B003D7204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BF0E4420FCBC8B003D7204 /* Main.storyboard */; };
 		C6BF0E4820FCBC8C003D7204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6BF0E4720FCBC8C003D7204 /* Assets.xcassets */; };
 		C6BF0E4B20FCBC8C003D7204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BF0E4920FCBC8C003D7204 /* LaunchScreen.storyboard */; };
+		C6BF0E5320FCBEAC003D7204 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF0E5220FCBEAC003D7204 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5817201FABEEED25246EF36A /* Pods_Questions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Questions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFCB86F191E9B19AA3BDDD65 /* Pods-Questions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Questions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Questions/Pods-Questions.debug.xcconfig"; sourceTree = "<group>"; };
+		B41E205FD2CAEFCD012CE73A /* Pods-Questions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Questions.release.xcconfig"; path = "Pods/Target Support Files/Pods-Questions/Pods-Questions.release.xcconfig"; sourceTree = "<group>"; };
 		C6BF0E3D20FCBC8B003D7204 /* Questions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Questions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6BF0E4020FCBC8B003D7204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C6BF0E4220FCBC8B003D7204 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6BF0E4220FCBC8B003D7204 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		C6BF0E4520FCBC8B003D7204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6BF0E4720FCBC8C003D7204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6BF0E4A20FCBC8C003D7204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6BF0E4C20FCBC8C003D7204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6BF0E5220FCBEAC003D7204 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				857BA1FB554134192D2A7180 /* Pods_Questions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		487E5317C45BE13235B597CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5817201FABEEED25246EF36A /* Pods_Questions.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C144F7FD43C6180AADBCCBF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFCB86F191E9B19AA3BDDD65 /* Pods-Questions.debug.xcconfig */,
+				B41E205FD2CAEFCD012CE73A /* Pods-Questions.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C6BF0E3420FCBC8B003D7204 = {
 			isa = PBXGroup;
 			children = (
 				C6BF0E3F20FCBC8B003D7204 /* Questions */,
 				C6BF0E3E20FCBC8B003D7204 /* Products */,
+				C144F7FD43C6180AADBCCBF6 /* Pods */,
+				487E5317C45BE13235B597CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,23 @@
 		C6BF0E3F20FCBC8B003D7204 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
+				C6BF0E5420FCBEB0003D7204 /* model */,
 				C6BF0E4020FCBC8B003D7204 /* AppDelegate.swift */,
-				C6BF0E4220FCBC8B003D7204 /* ViewController.swift */,
+				C6BF0E4220FCBC8B003D7204 /* QuestionTableViewController.swift */,
 				C6BF0E4420FCBC8B003D7204 /* Main.storyboard */,
 				C6BF0E4720FCBC8C003D7204 /* Assets.xcassets */,
 				C6BF0E4920FCBC8C003D7204 /* LaunchScreen.storyboard */,
 				C6BF0E4C20FCBC8C003D7204 /* Info.plist */,
 			);
 			path = Questions;
+			sourceTree = "<group>";
+		};
+		C6BF0E5420FCBEB0003D7204 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C6BF0E5220FCBEAC003D7204 /* Question.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6BF0E4F20FCBC8C003D7204 /* Build configuration list for PBXNativeTarget "Questions" */;
 			buildPhases = (
+				01B6C5EFFCF256DF34399096 /* [CP] Check Pods Manifest.lock */,
 				C6BF0E3920FCBC8B003D7204 /* Sources */,
 				C6BF0E3A20FCBC8B003D7204 /* Frameworks */,
 				C6BF0E3B20FCBC8B003D7204 /* Resources */,
+				DA11BE4C270FC3B6FAC7F6C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +167,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01B6C5EFFCF256DF34399096 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Questions-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA11BE4C270FC3B6FAC7F6C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Questions/Pods-Questions-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Questions/Pods-Questions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C6BF0E3920FCBC8B003D7204 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6BF0E4320FCBC8B003D7204 /* ViewController.swift in Sources */,
+				C6BF0E5320FCBEAC003D7204 /* Question.swift in Sources */,
+				C6BF0E4320FCBC8B003D7204 /* QuestionTableViewController.swift in Sources */,
 				C6BF0E4120FCBC8B003D7204 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,9 +361,11 @@
 		};
 		C6BF0E5020FCBC8C003D7204 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFCB86F191E9B19AA3BDDD65 /* Pods-Questions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Questions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -288,16 +373,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.covaim.Questions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		C6BF0E5120FCBC8C003D7204 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B41E205FD2CAEFCD012CE73A /* Pods-Questions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Questions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,8 +393,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.covaim.Questions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
