@@ -16,25 +16,26 @@ class QuestionTableViewController: UITableViewController {
     
     var selectedCategory : Category?
     var array = [String]()
-    var array1 = [String]()
     
-    var countOfQuestions : Int = 0
     @IBOutlet weak var press: UIBarButtonItem!
+    
     let dropDown = DropDown()
+    
     let URL_ByCategory = "http://10.177.1.100:8080/question/getByCategoryId/"
     let URL_All = "http://10.177.1.100:8080/question/getAll"
     let URL_ByCategoryByPage = "http://10.177.1.100:8080/question/getByCategoryId/"
+    
     var questions = [Question]()
     var questionsByCategory = [Question]()
+    
     var selectedItem = "1"
+    
     @IBAction func press1(_ sender: AnyObject) {
-        
         dropDown.show()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupDropDown()
         dropDown.dismissMode = .onTap
         dropDown.direction = .any
@@ -65,20 +66,19 @@ class QuestionTableViewController: UITableViewController {
         return cell
     }
     
-//    func getQuestionData(url: String){
-//        Alamofire.request(url, method: .get).responseJSON{
-//            response in
-//            if response.result.isSuccess{
-//                print("Got the data")
-//                let questionJSON : JSON = JSON(response.result.value!)
-//                // print(questionJSON)
-//                self.updateQuestions(json: questionJSON)
-//            }
-//            else{
-//                print("\(String(describing: response.result.error))")
-//            }
-//        }
-//    }
+    func getQuestionData(url: String){
+        Alamofire.request(url, method: .get).responseJSON{
+            response in
+            if response.result.isSuccess{
+                print("Got the data")
+                let questionJSON : JSON = JSON(response.result.value!)
+                // print(questionJSON)
+            }
+            else{
+                print("\(String(describing: response.result.error))")
+            }
+        }
+    }
     func getQuestionByCategoryIdAndPage(url:String,categoryId:String,pageNumber: String){
         var url1 : String = ""
         url1 = url + "/" + categoryId + "/" + pageNumber
@@ -125,7 +125,6 @@ class QuestionTableViewController: UITableViewController {
     }
     
     func loadItems(){
-        
         let categoryIdNew = selectedCategory?.categoryId
         
         if let categoryIdNewL = categoryIdNew{
