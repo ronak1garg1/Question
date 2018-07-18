@@ -65,20 +65,19 @@ class QuestionTableViewController: UITableViewController {
         return cell
     }
     
-//    func getQuestionData(url: String){
-//        Alamofire.request(url, method: .get).responseJSON{
-//            response in
-//            if response.result.isSuccess{
-//                print("Got the data")
-//                let questionJSON : JSON = JSON(response.result.value!)
-//                // print(questionJSON)
-//                self.updateQuestions(json: questionJSON)
-//            }
-//            else{
-//                print("\(String(describing: response.result.error))")
-//            }
-//        }
-//    }
+    func getQuestionData(url: String){
+        Alamofire.request(url, method: .get).responseJSON{
+            response in
+            if response.result.isSuccess{
+                print("Got the data")
+                let questionJSON : JSON = JSON(response.result.value!)
+                // print(questionJSON)
+            }
+            else{
+                print("\(String(describing: response.result.error))")
+            }
+        }
+    }
     func getQuestionByCategoryIdAndPage(url:String,categoryId:String,pageNumber: String){
         var url1 : String = ""
         url1 = url + "/" + categoryId + "/" + pageNumber
@@ -125,7 +124,6 @@ class QuestionTableViewController: UITableViewController {
     }
     
     func loadItems(){
-        
         let categoryIdNew = selectedCategory?.categoryId
         
         if let categoryIdNewL = categoryIdNew{
