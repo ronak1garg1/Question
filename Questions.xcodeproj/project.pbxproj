@@ -14,6 +14,10 @@
 		C6BF0E4820FCBC8C003D7204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6BF0E4720FCBC8C003D7204 /* Assets.xcassets */; };
 		C6BF0E4B20FCBC8C003D7204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BF0E4920FCBC8C003D7204 /* LaunchScreen.storyboard */; };
 		C6BF0E5320FCBEAC003D7204 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF0E5220FCBEAC003D7204 /* Question.swift */; };
+		C6BF0E5920FDC3E1003D7204 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF0E5820FDC3E1003D7204 /* CategoryViewController.swift */; };
+		C6BF0E5B20FDC4A1003D7204 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF0E5A20FDC4A1003D7204 /* Category.swift */; };
+		C6BF0E6720FDF868003D7204 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6BF0E6620FDF868003D7204 /* MyCell.xib */; };
+		C6BF0E6920FDF8C6003D7204 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF0E6820FDF8C6003D7204 /* MyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		C6BF0E4A20FCBC8C003D7204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6BF0E4C20FCBC8C003D7204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6BF0E5220FCBEAC003D7204 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		C6BF0E5820FDC3E1003D7204 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		C6BF0E5A20FDC4A1003D7204 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C6BF0E6620FDF868003D7204 /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
+		C6BF0E6820FDF8C6003D7204 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +90,13 @@
 			children = (
 				C6BF0E5420FCBEB0003D7204 /* model */,
 				C6BF0E4020FCBC8B003D7204 /* AppDelegate.swift */,
-				C6BF0E4220FCBC8B003D7204 /* QuestionTableViewController.swift */,
+				C6BF0E5520FDC38A003D7204 /* controller */,
 				C6BF0E4420FCBC8B003D7204 /* Main.storyboard */,
+				C6BF0E4C20FCBC8C003D7204 /* Info.plist */,
 				C6BF0E4720FCBC8C003D7204 /* Assets.xcassets */,
 				C6BF0E4920FCBC8C003D7204 /* LaunchScreen.storyboard */,
-				C6BF0E4C20FCBC8C003D7204 /* Info.plist */,
+				C6BF0E6620FDF868003D7204 /* MyCell.xib */,
+				C6BF0E6820FDF8C6003D7204 /* MyCell.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -95,8 +105,18 @@
 			isa = PBXGroup;
 			children = (
 				C6BF0E5220FCBEAC003D7204 /* Question.swift */,
+				C6BF0E5A20FDC4A1003D7204 /* Category.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		C6BF0E5520FDC38A003D7204 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				C6BF0E5820FDC3E1003D7204 /* CategoryViewController.swift */,
+				C6BF0E4220FCBC8B003D7204 /* QuestionTableViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6BF0E4B20FCBC8C003D7204 /* LaunchScreen.storyboard in Resources */,
+				C6BF0E6720FDF868003D7204 /* MyCell.xib in Resources */,
 				C6BF0E4820FCBC8C003D7204 /* Assets.xcassets in Resources */,
 				C6BF0E4620FCBC8B003D7204 /* Main.storyboard in Resources */,
 			);
@@ -194,15 +215,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Questions/Pods-Questions-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +236,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6BF0E5920FDC3E1003D7204 /* CategoryViewController.swift in Sources */,
+				C6BF0E5B20FDC4A1003D7204 /* Category.swift in Sources */,
 				C6BF0E5320FCBEAC003D7204 /* Question.swift in Sources */,
+				C6BF0E6920FDF8C6003D7204 /* MyCell.swift in Sources */,
 				C6BF0E4320FCBC8B003D7204 /* QuestionTableViewController.swift in Sources */,
 				C6BF0E4120FCBC8B003D7204 /* AppDelegate.swift in Sources */,
 			);

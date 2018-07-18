@@ -12,7 +12,7 @@
         <!--Questions-->
         <scene sceneID="R8W-p6-jfQ">
             <objects>
-                <tableViewController id="OG2-vT-8Rs" customClass="QuestionTableViewController" customModule="Questions" sceneMemberID="viewController">
+                <tableViewController id="OG2-vT-8Rs" customClass="QuestionTableViewController" customModule="Questions" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VZ6-Wq-1Lm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,11 +41,21 @@
                             <outlet property="delegate" destination="OG2-vT-8Rs" id="fYK-kL-QUJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Questions" id="b6O-Xw-3C9"/>
+                    <navigationItem key="navigationItem" title="Questions" id="b6O-Xw-3C9">
+                        <barButtonItem key="backBarButtonItem" title="BACK" id="eiO-zP-8mh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="nKN-rS-2di">
+                            <connections>
+                                <action selector="press1:" destination="OG2-vT-8Rs" id="kYj-Bl-gYr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="press" destination="nKN-rS-2di" id="agE-hS-4xC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEP-8J-dmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063" y="26"/>
+            <point key="canvasLocation" x="569" y="12"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uaE-1d-uaM">
@@ -62,12 +72,53 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="OG2-vT-8Rs" kind="relationship" relationship="rootViewController" id="k4P-6X-tja"/>
+                        <segue destination="q8N-7E-P1y" kind="relationship" relationship="rootViewController" id="a5c-6g-PTd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cg5-0w-sY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374.5" y="26.5"/>
+            <point key="canvasLocation" x="-913" y="13"/>
+        </scene>
+        <!--Categories-->
+        <scene sceneID="wCy-7X-Zpb">
+            <objects>
+                <tableViewController id="q8N-7E-P1y" customClass="CategoryViewController" customModule="Questions" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mTx-eX-NP4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="y61-7o-vQJ" style="IBUITableViewCellStyleDefault" id="6QJ-rN-XoT">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6QJ-rN-XoT" id="Ooh-E5-laV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y61-7o-vQJ">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="q8N-7E-P1y" id="Ehp-5w-oxW"/>
+                            <outlet property="delegate" destination="q8N-7E-P1y" id="Tyx-HN-gct"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Categories" id="33P-fQ-Clz"/>
+                    <connections>
+                        <segue destination="OG2-vT-8Rs" kind="show" identifier="goToQuestions" id="Axu-Gh-1PS"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3GM-Ig-6kd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="12"/>
         </scene>
     </scenes>
 </document>

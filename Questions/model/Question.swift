@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RealmSwift
 
 class Question : Codable{
     
@@ -24,6 +23,5 @@ class Question : Codable{
      var answer : String?
      var answerType : String?
      var status : String?
-    
     
 }
