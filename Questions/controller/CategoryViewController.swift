@@ -20,8 +20,6 @@ class CategoryViewController : UITableViewController{
         getCategoryData(url: URL_CATEGORY)
         tableView.reloadData()
         tableView.rowHeight = 80
-        
-        
     }
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
