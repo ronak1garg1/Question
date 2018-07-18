@@ -20,8 +20,6 @@ class CategoryViewController : UITableViewController{
         getCategoryData(url: URL_CATEGORY)
         tableView.reloadData()
         tableView.rowHeight = 80
-        
-        
     }
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,7 +49,12 @@ class CategoryViewController : UITableViewController{
             if response.result.isSuccess{
                 print("Got Category Data")
                 let categoryJSON : JSON = JSON(response.result.value)
-                self.updateCategories(json: categoryJSON)
+                if let data = try? categoryJSON.rawData(),let decoder = try? JSONDecoder().decode([Category].self, from: data){
+                    // print(decoder)
+                    self.categories = decoder
+                }
+                // print(categories)
+                self.tableView.reloadData()
             }
             else
             {
@@ -60,13 +63,5 @@ class CategoryViewController : UITableViewController{
             
         }
         
-    }
-    func updateCategories(json:JSON){
-        if let data = try? json.rawData(),let decoder = try? JSONDecoder().decode([Category].self, from: data){
-           // print(decoder)
-            categories = decoder
-        }
-        // print(categories)
-        tableView.reloadData()
     }
 }
