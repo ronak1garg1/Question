@@ -16,25 +16,26 @@ class QuestionTableViewController: UITableViewController {
     
     var selectedCategory : Category?
     var array = [String]()
-    var array1 = [String]()
     
-    var countOfQuestions : Int = 0
     @IBOutlet weak var press: UIBarButtonItem!
+    
     let dropDown = DropDown()
+    
     let URL_ByCategory = "http://10.177.1.100:8080/question/getByCategoryId/"
     let URL_All = "http://10.177.1.100:8080/question/getAll"
     let URL_ByCategoryByPage = "http://10.177.1.100:8080/question/getByCategoryId/"
+    
     var questions = [Question]()
     var questionsByCategory = [Question]()
+    
     var selectedItem = "1"
+    
     @IBAction func press1(_ sender: AnyObject) {
-        
         dropDown.show()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupDropDown()
         dropDown.dismissMode = .onTap
         dropDown.direction = .any
