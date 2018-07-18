@@ -60,10 +60,34 @@ class QuestionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
+        if questions[indexPath.row].questionType == "text"{
         cell.textLabel?.text = questions[indexPath.row].questionText
+            cell.textLabel?.numberOfLines = 0
+        }
+        else if questions[indexPath.row].questionType == "video"{
+            cell.textLabel?.text = questions[indexPath.row].questionText! + " " + "\u{1f4f9}"
+            cell.textLabel?.numberOfLines = 0
+        }
+        else if questions[indexPath.row].questionType == "audio"{
+            cell.textLabel?.text = questions[indexPath.row].questionText! + " " + "\u{1f4e2}"
+            cell.textLabel?.numberOfLines = 0
+        }
+        else if questions[indexPath.row].questionType == "image"{
+            cell.textLabel?.text = questions[indexPath.row].questionText! + " " + "\u{1f4f7}"
+            cell.textLabel?.numberOfLines = 0
+        }
         cell.textLabel?.numberOfLines = 0
-        
         return cell
+    }
+   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    performSegue(withIdentifier: "goToQuestionPage", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! QuestionViewController
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.question = questions[indexPath.row]
+        }
     }
     
     func getQuestionData(url: String){
