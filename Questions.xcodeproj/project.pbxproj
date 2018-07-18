@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		857BA1FB554134192D2A7180 /* Pods_Questions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5817201FABEEED25246EF36A /* Pods_Questions.framework */; };
+		C64E933920FF1AC900D98E78 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64E933820FF1AC900D98E78 /* QuestionViewController.swift */; };
 		C6BF0E4120FCBC8B003D7204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF0E4020FCBC8B003D7204 /* AppDelegate.swift */; };
 		C6BF0E4320FCBC8B003D7204 /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF0E4220FCBC8B003D7204 /* QuestionTableViewController.swift */; };
 		C6BF0E4620FCBC8B003D7204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BF0E4420FCBC8B003D7204 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		5817201FABEEED25246EF36A /* Pods_Questions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Questions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCB86F191E9B19AA3BDDD65 /* Pods-Questions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Questions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Questions/Pods-Questions.debug.xcconfig"; sourceTree = "<group>"; };
 		B41E205FD2CAEFCD012CE73A /* Pods-Questions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Questions.release.xcconfig"; path = "Pods/Target Support Files/Pods-Questions/Pods-Questions.release.xcconfig"; sourceTree = "<group>"; };
+		C64E933820FF1AC900D98E78 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		C6BF0E3D20FCBC8B003D7204 /* Questions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Questions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6BF0E4020FCBC8B003D7204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6BF0E4220FCBC8B003D7204 /* QuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				C6BF0E5820FDC3E1003D7204 /* CategoryViewController.swift */,
 				C6BF0E4220FCBC8B003D7204 /* QuestionTableViewController.swift */,
+				C64E933820FF1AC900D98E78 /* QuestionViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -216,12 +219,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Questions/Pods-Questions-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +243,7 @@
 			files = (
 				C6BF0E5920FDC3E1003D7204 /* CategoryViewController.swift in Sources */,
 				C6BF0E5B20FDC4A1003D7204 /* Category.swift in Sources */,
+				C64E933920FF1AC900D98E78 /* QuestionViewController.swift in Sources */,
 				C6BF0E5320FCBEAC003D7204 /* Question.swift in Sources */,
 				C6BF0E6920FDF8C6003D7204 /* MyCell.swift in Sources */,
 				C6BF0E4320FCBC8B003D7204 /* QuestionTableViewController.swift in Sources */,
