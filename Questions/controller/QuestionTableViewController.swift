@@ -107,7 +107,7 @@ class QuestionTableViewController: UITableViewController {
         Alamofire.request(url1, method: .get).responseJSON{
             response in
             if response.result.isSuccess{
-                print("Got the data by category id")
+                print("Got count of data by category id")
                 let questionByCategoryJSON1 : JSON = JSON(response.result.value!)
                 //print(questionByCategory)
                 if  let data = try? questionByCategoryJSON1.rawData(), let decoder = try? JSONDecoder().decode([Question].self, from: data){
